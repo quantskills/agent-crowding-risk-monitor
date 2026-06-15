@@ -1,26 +1,21 @@
 {
-  "agent": "agent-crowding-risk-monitor",
-  "state": "crowding-watch",
-  "risk_level": "高关注",
-  "execution_boundary": "research_and_monitoring_only",
+  "agent_state": "crowding-watch",
   "rules": [
     {
-      "id": "agent-crowding-risk-monitor.upgrade",
-      "severity": "watch_upgrade",
-      "condition": "龙虎榜热度、融资余额和成交额继续同步扩张。",
-      "action": "rerun_agent_and_add_to_research_backlog"
+      "level": "watch",
+      "condition": "核心状态延续",
+      "action": "更新研究日志并保留观察"
     },
     {
-      "id": "agent-crowding-risk-monitor.degrade",
-      "severity": "watch_degrade",
-      "condition": "热度扩散但融资不跟随，或高金额样本仍有健康承接。",
-      "action": "lower_confidence_and_write_review_note"
+      "level": "upgrade",
+      "condition": "核心指标继续同向强化",
+      "action": "提高复盘频率"
     },
     {
-      "id": "agent-crowding-risk-monitor.data_gap",
-      "severity": "data_quality",
-      "condition": "Pandadata 关键表行数低于本 Agent 需要的最低样本数",
-      "action": "stop_and_mark_inconclusive"
+      "level": "downgrade",
+      "condition": "核心指标反向或数据不足",
+      "action": "降级当前解释权重"
     }
-  ]
+  ],
+  "trading_boundary": "Research and monitoring only. No automatic order placement."
 }
