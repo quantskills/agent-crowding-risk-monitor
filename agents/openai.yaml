@@ -1,0 +1,16 @@
+name: "agent-crowding-risk-monitor"
+display_name: "Crowding Risk Monitor"
+short_description: "Monitor crowded-trade risk from Pandadata price, turnover, margin, and LHB heat evidence."
+default_prompt: "Use agent-crowding-risk-monitor with Pandadata live evidence and produce reader-facing research materials."
+metadata:
+  organization: "QuantSkills"
+  organization_url: "https://github.com/quantskills"
+  repository: "quantskills/agent-crowding-risk-monitor"
+  repository_url: "https://github.com/quantskills/agent-crowding-risk-monitor"
+  project_type: "agent"
+  collection: "pandadata-research-monitor-agents-8"
+  license: "GPL-3.0"
+  category: "risk-agent"
+  tags: ["crowding", "margin", "risk-monitoring", "pandadata"]
+  platforms: ["claude-code", "codex", "openclaw", "cursor"]
+  data_source: "Pandadata"
