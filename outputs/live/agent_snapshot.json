@@ -1,0 +1,59 @@
+{
+    "agent":  "agent-crowding-risk-monitor",
+    "title_zh":  "拥挤交易风险盯盘 Agent",
+    "title_en":  "Crowding Risk Monitor",
+    "category":  "risk-agent",
+    "tags":  [
+                 "crowding",
+                 "margin",
+                 "risk-monitoring",
+                 "pandadata"
+             ],
+    "state":  "crowding-watch",
+    "risk_level":  "高关注",
+    "decision_question":  "热门交易是否已经拥挤到需要调整风险预算？",
+    "primary_watch_focus":  "龙虎榜热度、融资余额、成交金额和承接质量。",
+    "scorecard":  {
+                      "state":  "crowding-watch",
+                      "lhb_heat_rows":  550,
+                      "symbol":  "000001.SZ",
+                      "rows":  550,
+                      "lhb_mean_change_rate":  0.30747297297297305,
+                      "lhb_avg_amount":  1527516416.9563637,
+                      "lhb_avg_turnover":  0.3954171428571427,
+                      "margin_total_balance_change":  0.009069756960689901,
+                      "short_balance_change":  0.013904677568562507,
+                      "confidence":  "medium"
+                  },
+    "data_source":  "Pandadata",
+    "date_windows":  {
+                         "market":  [
+                                        "20250102",
+                                        "20250110"
+                                    ],
+                         "lhb":  [
+                                     "20250102",
+                                     "20250110"
+                                 ],
+                         "options":  [
+                                         "20260310",
+                                         "20260310"
+                                     ]
+                     },
+    "reader_outputs":  [
+                           "report.html",
+                           "handoff_card.md",
+                           "research_journal_template.md"
+                       ],
+    "machine_outputs":  [
+                            "agent_snapshot.json",
+                            "alert_rules.json"
+                        ],
+    "tabular_outputs":  [
+                            "scorecard_metrics.csv",
+                            "data_dictionary.csv",
+                            "decision_matrix.csv",
+                            "monitoring_checklist.csv"
+                        ],
+    "quality_status":  "pass"
+}

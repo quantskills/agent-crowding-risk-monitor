@@ -1,0 +1,11 @@
+metric,value,type,reader_note
+state,crowding-watch,str,核心状态字段
+lhb_heat_rows,550,int,用于复核本次判断的证据字段
+symbol,000001.SZ,str,用于复核本次判断的证据字段
+rows,550,int,用于复核本次判断的证据字段
+lhb_mean_change_rate,0.31,float,用于复核本次判断的证据字段
+lhb_avg_amount,1.53B,float,用于复核本次判断的证据字段
+lhb_avg_turnover,0.40,float,用于复核本次判断的证据字段
+margin_total_balance_change,0.01,float,用于复核本次判断的证据字段
+short_balance_change,0.01,float,用于复核本次判断的证据字段
+confidence,medium,str,用于复核本次判断的证据字段
