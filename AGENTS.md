@@ -41,6 +41,31 @@ quantSkills:
   summary_en: Monitor crowded-trade risk from Pandadata price, turnover, margin, and LHB heat evidence.
 ---
 
+```json qsh-form
+{
+  "version": 1,
+  "task": {
+    "placeholder": "补充需要监控的拥挤交易主题、板块或风险偏好（可选）"
+  },
+  "fields": [
+    {
+      "key": "index",
+      "label": "监控指数",
+      "type": "select",
+      "default": "000300.SH",
+      "options": [
+        { "value": "000300.SH", "label": "沪深300" },
+        { "value": "000001.SH", "label": "上证指数" },
+        { "value": "399006.SZ", "label": "创业板指" },
+        { "value": "000905.SH", "label": "中证500" },
+        { "value": "000852.SH", "label": "中证1000" }
+      ]
+    }
+  ],
+  "prompt_template": "{{#task}}任务与材料：\n{{task}}\n\n{{/task}}{{#attachments}}用户上传的材料（已放入工作区）：\n{{attachments}}\n\n{{/attachments}}运行 {{index}} 的拥挤交易风险监控，结合价格、成交与换手、融资余额和龙虎榜热度识别抱团、过热、踩踏及去杠杆风险；区分当前、升级、降级与证据不足场景，给出失效条件和后续观察清单，输出中文报告。"
+}
+```
+
 # Crowding Risk Monitor
 
 Use this Agent when a user needs a Pandadata-backed research or monitoring answer for:
